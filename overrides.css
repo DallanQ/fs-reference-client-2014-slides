@@ -1,0 +1,88 @@
+h2.em {
+    color:#eaeab4!important;
+}
+.em {
+    color:#6AB825!important;
+}
+
+.em2 {
+    color:#00C0F7!important
+}
+
+.em4 {
+    color:#9955CC!important
+}
+
+.em3 {
+    color:#ED9D13!important
+}
+
+.em5 {
+    color:#A44!important;
+}
+
+.good {
+    color:#6AB825!important;
+}
+
+.bad {
+    color:maroon!important;
+}
+
+.cols {
+    display:table;
+    vertical-align:top;
+    width:100%;
+}
+
+.cols .col {
+    display:table-cell;
+    width:50%;
+}
+
+.two-col .col {
+    width:50%;
+}
+
+.three-col .col {
+    width:33%;
+}
+
+html {
+    background-color: #131313;
+    font-size: 150%;
+}
+
+body {
+    background:
+        -webkit-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+        -webkit-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+        -webkit-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+        -webkit-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+        -webkit-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+        -webkit-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background:
+        -moz-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+        -moz-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+        -moz-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+        -moz-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+        -moz-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+        -moz-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background:
+        -o-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+        -o-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+        -o-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+        -o-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+        -o-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+        -o-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+
+    background:
+        -ms-linear-gradient(63deg, #151515 5px, transparent 5px) 0 5px,
+        -ms-linear-gradient(243deg, #151515 5px, transparent 5px) 10px 0px,
+        -ms-linear-gradient(63deg, #222 5px, transparent 5px) 0px 10px,
+        -ms-linear-gradient(243deg, #222 5px, transparent 5px) 10px 5px,
+        -ms-linear-gradient(0deg, #1b1b1b 10px, transparent 10px),
+        -ms-linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+
+    background-size: 20px 20px;
+}
