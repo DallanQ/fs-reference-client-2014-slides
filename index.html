@@ -41,401 +41,444 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>The Legoization of Software Engineering</h1>
-					<h3>and how to create hybrid-mobile apps</h3>
-          <h3 class="em">Dallan Quass, PhD</h3>
-          <img src="img/legoman.jpg" alt=""/>
-				</section>
-
-				<section>
-					<h1>Who am I?</h1>
-          <ul>
-            <li><span class="em">BYU</span> BS in Computer Science - 1986</li>
-            <li><span class="em">Stanford</span> PhD in Computer Science - 1997</li>
-            <li>Author of <span class="em">43</span> papers - cited nearly <span class="em">4000</span> times</li>
-            <li style="list-style-type: none">&nbsp;</li>
-            <li><span class="em">Junglee</span> co-founder - acquired by Amazon.com</li>
-            <li><span class="em">FlipDog</span> co-founder - acquired by Monster.com</li>
-            <li><span class="em">WhizBang Labs</span> co-founder - went bankrupt &nbsp; :-(</li>
-            <li><span class="em">FamilySearch</span> CTO - 2002-2004</li>
-            <li style="list-style-type: none">&nbsp;</li>
-            <li><span class="em">Working programmer</span> - independent contractor</li>
-            <li>Coded professionally for <span class="em">30</span> years</li>
-            <li>Developing an open-source <span class="em">mobile app for family history</span></li>
-          </ul>
+					<h1>The FamilySearch Reference Client</h1>
+          <p>Open-source implementation of the Family Tree UI</p>
+          <p>Written as a Single-Page Application in Javascript</p>
+          <p>using the REST API</p>
+          <br/>
+          <h3 class="em">Dallan Quass</h3>
+          <h3 class="em">Lynn Monson</h3>
+          <h3 class="em">Dovy Paukstys</h3>
 				</section>
 
         <section>
-          <h1>Increasing Rate of Change</h1>
-          <img src="img/total-growth-figure-3.jpg" alt=""/>
-          <p>Millions of lines of code contributed to open-source projects</p>
-          <p>1995 - 2006</p>
+          <h1>Tour</h1>
+          <img src="img/tree.png" alt=""/>
         </section>
 
         <section>
-          <h1>Web Stack</h1>
-          <img src="img/trends.jpg" alt=""/>
+          <h1>Select Person</h1>
+          <img src="img/tree-selected.png" alt=""/>
         </section>
-        
+
         <section>
-          <h1>EaaS</h1>
-          <h2>Everything as a Service</h2>
-          <ul>
-            <li><span class="em">Infrastructure:</span> AWS, Google Compute Engine</li>
-            <li><span class="em">Platform:</span> AWS Elastic Beanstalk, Google AppEngine, Heroku</li>
-            <li>Almost anything you can imagine
+          <h1>Person</h1>
+          <img src="img/person-top.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Person (scroll down)</h1>
+          <img src="img/person-bottom.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Edit Name</h1>
+          <img src="img/name-edit.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Chinese</h1>
+          <img src="img/name-edit-chinese.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Add Event</h1>
+          <img src="img/event-add.png" alt=""/>
+        </section>
+
+        <!--
+        <section>
+          <h1>Event Added</h1>
+          <img src="img/event-added.png" alt=""/>
+        </section>
+        -->
+
+        <section>
+          <h1>Add Source</h1>
+          <img src="img/source-add.png" alt=""/>
+        </section>
+
+        <!--
+        <section>
+          <h1>Source Added</h1>
+          <img src="img/source-added.png" alt=""/>
+        </section>
+        -->
+
+        <section>
+          <h1>Source Box</h1>
+          <img src="img/sourcebox.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Why was it developed?</h1>
+          <ol>
+            <li>Make it easy for partners to allow their customers to access the FamilySearch tree using an
+              <span class="em">easily-extensible framework</span></li>
+            <li>Provide a set of <span class="em">re-usable components</span> for use by partners</li>
+            <li>A real-world example of accessing the FamilySearch Tree using the
+              <a href="https://github.com/rootsdev/familysearch-javascript-sdk">FamilySearch Javascript SDK</a></li>
+          </ol>
+        </section>
+
+        <section>
+          <h1>What can I do with it?</h1>
+          <ol>
+            <li>Have you ever thought you could improve upon the FamilySearch UI?
               <ul>
-                <li><span class="em">Continuous integration testing:</span> Travis-CI, CloudBees</li>
-                <li><span class="em">MongoDB:</span> MongoHQ, MongoLab</li>
-                <li><span class="em">Facial Recognition:</span> <a href="http://blog.mashape.com/list-of-50-face-detection-recognition-apis/">http://blog.mashape.com/list-of-50-face-detection-recognition-apis</a></li>
-                <li><span class="em">Paytments:</span> Braintree, Stripe, Paypal, Square, Payvio</li>
+                <li class="em">Fork this project and extend it</li>
               </ul>
             </li>
-          </ul>
+            <li>Do you want to allow people to edit names and are intimidated by the complexity?
+              <ul>
+                <li class="em">Use the name edit component from this project</li>
+              </ul>
+            </li>
+            <li>Would you like to understand better how to use the FamilySearch REST API?
+              <ul>
+                <li class="em">Review the source for this project</li>
+              </ul>
+            </li>
+          </ol>
         </section>
 
         <section>
-          <h1>BaaS</h1>
-          <h2>Backend as a Service</h2>
-          <p>No server at all</p>
+          <h1>How can I get started?</h1>
+          <p class="em">Install pre-requisites</p>
           <ul>
-            <li class="em">Parse</li>
-            <li class="em">GoInstant</li>
-            <li class="em">Firebase</li>
-            <li class="em">Amazon</li>
+            <li>Install <span class="em2">node.js</span> (nodejs.org)</li>
+            <li><span class="em2">npm install -g bower</span> install bower</li>
+            <li><span class="em2">npm install -g grunt-cli</span> install grunt</li>
+            <li>Install <span class="em2">PhantomJS</span> (phantomjs.org)</li>
           </ul>
         </section>
 
         <section>
-          <img src="img/writing-server-code.jpg" alt=""/>
+          <h1>How can I get started?</h1>
+          <p class="em">Get an App Key</p>
+          <p>Contact FamilySearch developer support if you don't already have one</p>
+          <p>Ask FamilySearch developer support to add <a href="http://localhost:9000/#!/auth">http://localhost:9000/#!/auth</a> as an OAuth redirect URL</p>
         </section>
 
         <section>
-          <h1>Deployment Options</h1>
-          <img src="img/deployment.jpg" alt=""/>
-        </section>
-
-        <section>
-          <h1>Docker</h1>
+          <h1>How can I get started?</h1>
+          <p class="em">Run the code</p>
           <ul>
-            <li>Initial release: <span class="em">March 2013</span></li>
-            <li>Currently <span class="em">28</span>th most-starred repo on GitHub</li>
-            <li><span class="em">15,132</span> Stars</li>
-            <li>Written in <span class="em">Go</span></li>
+            <li>clone github.com/rootsdev/familysearch-reference-client</li>
+            <li><span class="em2">npm install</span> install build dependencies</li>
+            <li><span class="em2">bower install</span> install client dependencies</li>
+            <li><span class="em2">grunt watch</span> launch a server and watch for changes</li>
+            <li>Visit <a href="http://localhost:9000">http://localhost:9000</a></li>
+            <li>Sign in using your sandbox username and password</li>
           </ul>
         </section>
 
         <section>
-          <h3 style="margin-top: -100px">google/golang</h3>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
-FROM google/debian:wheezy
-
-RUN apt-get update -y && apt-get install --no-install-recommends -y -q curl \
-            build-essential ca-certificates git mercurial bzr
-RUN mkdir /goroot && curl https://storage.googleapis.com/golang/go1.3.1.linux-amd64.tar.gz \
-            | tar xvzf - -C /goroot --strip-components=1
-RUN mkdir /gopath
-
-ENV GOROOT /goroot
-ENV GOPATH /gopath
-ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
-          </code></pre>
-          <p>&nbsp;</p>
-          <h3>google/golang-runtime</h3>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
-FROM google/golang
-
-ADD go-build /bin/go-build
-ADD go-run /bin/go-run
-
-ONBUILD ADD . /gopath/src/app/
-ONBUILD RUN /bin/go-build
-
-EXPOSE 8080
-CMD []
-ENTRYPOINT ["/bin/go-run"]
-          </code></pre>
-          <p>&nbsp;</p>
-          <h3>My docker file</h3>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
-FROM google/golang-runtime
-EXPOSE 80
-          </code></pre>
-        </section>
-
-        <section>
-          <img src="img/bear.png" alt=""/>
-        </section>
-
-        <section>
-          <h1>Rise of the Single-Page Application</h1>
-          <img src="img/pinterest.png" alt=""/>
-        </section>
-
-        <section>
-          <h1>The Rise of Javascript</h1>
+          <h1>AngularJS</h1>
           <div class="cols two-col">
             <div class="col">
-              <img src="img/lang-rank-614-wm1.png" alt=""/>
+              <img src="img/js-mvc-trends.png" alt=""/>
             </div>
             <div class="col">
-              <img src="img/github_new_repos.png" alt=""/>
+              <img src="img/js-mvc-areas.png" alt=""/>
             </div>
           </div>
         </section>
 
         <section>
-          <h1>Javascript MV* Frameworks</h1>
-          <img src="img/js-mvc-trends.png" alt=""/>
-          <p>AngularJS is also the most-starred on GitHub, followed by Backbone, Meteor, Ember, and React</p>
-        </section>
-
-        <section>
-          <h1>Javascript MV* Frameworks</h1>
-          <img src="img/js-mvc-areas.png" alt=""/>
-        </section>
-
-        <section>
-          <iframe width="853" height="480" src="//www.youtube.com/embed/wCVwdvufTds?rel=0" frameborder="0" allowfullscreen></iframe>
-        </section>
-
-        <section>
-          <h1>The Future</h1>
-          <h2>Web Components & Polymer</h2>
-          <img src="img/polymer.png" alt=""/>
-        </section>
-
-        <section>
-          <h1>The Future is Mobile</h1>
-          <img src="img/mobile-trends.png" alt=""/>
-        </section>
-
-        <section>
-          <img src="img/frodo.png" alt=""/>
-        </section>
-
-        <section>
-          <h1>Mobile App Building Options</h1>
+          <h1>AngularJS Framework</h1>
           <ul>
-            <li><span class="em">Objective-C</span> & <span class="em">Java</span></li>
-            <li class="em">Xamarin - C#</li>
-            <li class="em">Hybrid-Mobile with Javascript</li>
-            <li><span class="em">Others:</span> Apportable, Appcelerator Titanium</li>
+            <li>Models</li>
+            <li>Views</li>
+            <li>Controllers</li>
+            <li style="list-style-type: none">&nbsp;</li>
+            <li>Directives (components)</li>
+            <li>Filters</li>
+            <li>Services</li>
+            <li style="list-style-type: none">&nbsp;</li>
+            <li>dependency injection</li>
+            <li>easy unit tests</li>
           </ul>
         </section>
 
         <section>
-          <h2>Hybrid-Mobile Challenges</h2>
-          <p>&nbsp;</p>
-          <h3 class="em">Animations/Transitions don't feel native</h3>
-          <blockquote>When I’m introspective about the last few years I think the biggest mistake that we made, as a company,
-            is betting too much on HTML5 as opposed to native… because it just wasn’t there.
-            <br/>-- Zuckerberg 2012</blockquote>
-          <p>&nbsp;</p>
-          <h3 class="em">Tooling support</h3>
-          <blockquote>There are a few things that are critically missing. One is tooling support —
-            having a debugger that actually works, performance tools that tell you where the memory is running out.
-            <br/>-- LinkedIn 2013</blockquote>
-        </section>
-
-        <section>
-          <h1>Addressing Challenges</h1>
-          <div class="cols two-col">
-            <div class="col">
-              <img src="img/animation.png" alt=""/>
-            </div>
-            <div class="col">
-              <iframe width="480" height="360" src="//www.youtube.com/embed/-62uPWUxgcg?rel=0" frameborder="0" allowfullscreen></iframe>            </div>
-          </div>
-        </section>
-
-        <section>
-          <h1>Addressing Challenges</h1>
-          <h3 class="em">Combine HTML + Native</h3>
-          <blockquote>If you’re programming a 3D game, you want every ounce of raw-metal speed to improve the experience.
-            But if you’re building an information system like Basecamp, you’re looking at least as much at programmer speed
-            as you are computing speed. And frequently, it’s well worth trading the latter for the former. So we did.
-            <br/>-- 37 Signals 2014</blockquote>
-        </section>
-
-        <section>
-          <h1>37 Signals' Approach</h1>
-          <ul>
-            <li>Decisions based on computing speeds quickly decay</li>
-            <li><span class="em">1st Gen:</span> Native shell around server-generated webviews</li>
-            <li><span class="em">2nd Gen:</span> Native shell + native navigation</li>
-            <li><span class="em">3rd Gen:</span> 90% HTML, 10% Native</li>
-          </ul>
-        </section>
-
-        <section>
-          <h1>iTunes on IOS</h1>
-          <img src="img/itunes-display.jpg" alt=""/>
-        </section>
-
-        <section>
-          <h1>My Approach</h1>
-          <ul>
-            <li>Hybrid-Mobile using Javascript</li>
-            <li class="em">AngularJS</li>
-            <li class="em">Ionic Framework</li>
-            <li class="em">Cordova</li>
-            <li class="em">ngCordova</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Simple Family History App</h2>
-          <div class="cols two-col">
-            <div class="col">
-              <img src="img/rc-login.png" alt=""/>
-            </div>
-            <div class="col">
-              <img src="img/rc-tree.png" alt=""/>
-            </div>
-          </div>
-          <p>&nbsp;</p>
-          <p>&lt; 200 LoC</p>
-          <p>FamilySearch REST API <a href="https://familysearch.org/developers/">http://familysearch.org/developers/</a></p>
-          <p>Uses <a href="https://github.com/rootsdev/familysearch-javascript-sdk">https://github.com/rootsdev/familysearch-javascript-sdk</a></p>
-        </section>
-
-        <section>
-          <h1>Reference Client</h1>
-          <h3 class="em">Open-Source Reimplementation of FamilySearch UI</h3>
-          <img src="img/fs-demo.png" alt="" height="500px"/>
-          <p>6500 LoC</p>
-          <p><a href="https://github.com/rootsdev/familysearch-reference-client">https://github.com/rootsdev/familysearch-reference-client</a></p>
-        </section>
-
-        <section>
-          <h2>Simple Family History App</h2>
-          <img src="img/rc-tree.png" alt=""/>
-        </section>
-
-        <section>
-          <h1>DSL in HTML</h1>
-          <h3 class="em">tree.html</h3>
+          <h1 style="text-transform: none">index.html</h1>
           <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
-<ion-view title="Tree">
-  <ion-content scroll="false">
-    <div ng-repeat="family in tree.families">
-      <rc-family family="family" class="tree-family" ng-class="'--pos'+family.pos">
-      </rc-family>
+&lt;head&gt;
+  <!-- stylesheets and fonts -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="assets/museo/museo.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <% styles.forEach( function ( file ) { %>
+            <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+  <!-- Javascript -->
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <% scripts.forEach( function ( file ) { %>
+            <script type="text/javascript" src="<%= file %>"></script><% }); %>
+&lt;/head&gt;
+&lt;body&gt;
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">FamilySearch Reference Client</a>
+        <span ng-show="busy" style="float: left; line-height: 50px"><i class="fa fa-spinner fa-spin"></i></span>
+      </div>
+      <div class="collapse navbar-collapse header-collapse">
+      </div>
     </div>
-  </ion-content>
-</ion-view>
+  </div>
+  <div id="themeContainer" class="familysearch_theme">
+    <div fs-growl></div>
+    <div fs-re-authenticate></div>
+    <div class="container" ui-view ></div>
+  </div>
+&lt;/body&gt;
           </code></pre>
         </section>
 
         <section>
-          <h1>MV* Architecture</h1>
-          <h3 class="em">tree.js</h3>
+          <h1 style="text-transform: none">app.js</h1>
           <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
-(function(){
-  'use strict';
-  angular.module('tree', ['ionic', 'rcFamily', 'rcFS', 'rcFSUtils', 'lodash'])
+angular.module('fsReferenceClient', [ 'fsReferenceClientShared', 'templates-app', 'templates-common', 'ui.bootstrap', 'ui.router.state', 'ui.router'])
+  .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+  })
+  .config(function(fsApiProvider) {
+    fsApiProvider
+      .setClientId('WCQY-7J1Q-GKVV-7DNM-SQ5M-9Q5H-JX3H-CMJK')
+      .setEnvironmentName('sandbox')
+      .setRedirectUri('http://localhost:9000/#!/auth');
+  })
+  .config(function(fsLocationProvider) {
+    var prefix = '/#';
+    fsLocationProvider.configure({
+      getPersonLocation: function(personId) {
+        return {
+          prefix: prefix,
+          path: '/person/'+personId
+        };
+      },
+      ...
+    });
+  })
+  .controller('AppController', function ($scope) {
+    $scope.environment = 'Sandbox';
+    $scope.$on('$stateChangeStart', function(event, toState) {
+      if (toState.resolve) {
+        $scope.busy = true;
+      }
+    });
+    $scope.$on('$stateChangeSuccess', function() {
+      $scope.busy = false;
+    });
+    $scope.$on('$stateChangeError', function() {
+      $scope.busy = false;
+    });
+  });
+          </code></pre>
+        </section>
+
+        <section>
+          <h1 style="text-transform: none">person.js</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+angular.module('fsReferenceClient')
   .config(function ($stateProvider) {
-    $stateProvider.state('tree', {
-      url: '/tree',
-      controller: 'TreeController as tree',
-      templateUrl: 'js/tree/tree.html',
+    $stateProvider.state('person', {
+      url: '/person/:personId',
+      controller: 'PersonController',
+      templateUrl: 'person/person.tpl.html',
+      data: { pageTitle: 'Person' },
       resolve: {
-        families: function(rcFS, rcFSUtils) {
-          return rcFS.getCurrentUser().then(function(response) {
-            var personId = response.getUser().personId;
-            return rcFS.getSpouses(personId).then(function(response) {
-              var spouseId = response.getCoupleRelationships()[0].$getSpouseId(personId);
-              return rcFS.getAncestry(personId, {spouse: spouseId, generations: 5}).then(function(response) {
-                return rcFSUtils.pedigreeToFamilies(response);
-              });
+        person: ['$stateParams','fsApi',function($stateParams, fsApi) {
+          return fsApi.getPerson($stateParams.personId).then(function (response) {
+            return response.getPerson();
+          });
+        }],
+        sources: ['_','$q','$stateParams','fsApi',function(_, $q, $stateParams, fsApi) {
+          return fsApi.getPersonSourcesQuery($stateParams.personId).then(function(response) {
+            return _.map(response.getSourceRefs(), function(sourceRef) {
+              return {
+                ref: sourceRef,
+                description: response.getSourceDescription(sourceRef.$sourceDescriptionId),
+                id: sourceRef.id
+              };
             });
           });
-        }
+        }]
       }
     });
   })
-  .controller('TreeController', function (_, families) {
-    this.families = _.map(families, function(family) {
-      return _.extend({
-        numStars: Math.floor(Math.random() * 6),
-        numChallenges: Math.floor(Math.random() * 3)
-      }, family);
-    });
-  });
-})();
           </code></pre>
         </section>
 
         <section>
-          <h1>Taming CSS with SASS</h1>
-          <h3 class="em">tree.scss</h3>
-          <div class="cols two-col">
-            <div class="col" style="left-margin: -200px; ">
-              <pre><code style="font-size:20px; line-height:20px; width:400px; max-height:600px" data-trim>
-$width: 107;
-$height: 167;
+          <h1 style="text-transform: none">person.js (continued)</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+  .controller('PersonController', function ($scope, $state, $rootScope, person, sources, fsApi, fsUtils, fsCurrentUserCache) {
+    var sections = ['vitalFacts', 'otherInfo', 'familyMembers', 'sources', 'discussions', 'notes' ];
+    $scope.states = {};
+    sections.forEach(function(section) {
+      $scope.states[section] = {value: 'open'};
+    });
+    $scope.person = person;
+    $scope.sources = sources;
+    sources.forEach(function(source) {
+      fsUtils.mixinStateFunctions($scope, source);
+    });
 
-$sca1: 1;
-$sca2: .81;
-...
+    var unbindRestored = $rootScope.$on('restored', function() {
+      fsApi.getPerson($scope.person.id).then(function (response) {
+        fsUtils.refresh($scope.person, response.getPerson());
+      });
+    });
+    $scope.$on('$destroy', unbindRestored);
 
-$col0: 12;
-$col1: $col0 + ($width * $sca1);
-...
-
-$screenHeight: 437;
-$ofs0: ($screenHeight / 2) -
-                ($height / 2);
-$ofs1: ($screenHeight / 4);
-...
-
-$light1: 85%;
-$light2: 80%;
-...
-              </code></pre>
-            </div>
-            <div class="col">
-              <pre><code style="font-size:20px; line-height:20px; width:600px; max-height:600px" data-trim>
-@include component(tree-family) {
-  position: absolute;
-  width: #{$width}px;
-  height: #{$height}px;
-  overflow: hidden;
-  color: #333;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
-
-  @include transform-origin(left, center);
-
-  @include option(pos1) {
-    background-color: hsl(240, 100%, $light1);
-    z-index: 5;
-    @include translate-scale($col0, $ofs0, $sca1);
-  }
-  @include option(pos2) {
-    background-color: hsl(240, 100%, $light2);
-    z-index: 4;
-    @include translate-scale($col1, $ofs0 - $ofs1,
-                             $sca2);
-  }
-...
-}
-              </code></pre>
-            </div>
-          </div>
+    $scope.$on('delete', function(event, person, changeMessage) {
+      event.stopPropagation();
+      person._busy = true;
+      person.$delete(changeMessage).then(function() {
+        person._busy = false;
+        fsCurrentUserCache.getUser().then(function(user) {
+          $state.go('person', { personId: user.personId });
+          $rootScope.$emit('alert', {level: 'success', text: person.$getDisplayName()+' deleted'});
+        });
+      });
+    });
+  });
+          </code></pre>
         </section>
 
-         <section>
-           <h1>LifeLong Learning</h1>
-           <img src="img/hinckley.jpg" alt=""/>
-           <blockquote>
-             There can be no doubt, none whatever, that education pays. Do not short-circuit your lives.
-             If you do so, you will pay for it over and over and over again...
-             The Lord wants you to train your minds and hands to become an influence for good as you go forward with your lives.
-             <br/>-- Gordon B Hinckley 2007
-           </blockquote>
-         </section>
-			</div>
+        <section>
+          <h1 style="text-transform: none">person.tpl.html</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+<div fs-person-profile person="person"></div>
+<div class="mainContent">
+  <div class="row">
+    <div class="col-md-9">
+      <div fs-vital-facts-section person="person" sources="sources" state="states['vitalFacts']"></div>
+      <div fs-other-info-section person="person" state="states['otherInfo']"></div>
+      <div fs-family-members-section person="person" state="states['familyMembers']"></div>
+      <div fs-sources-section person="person" sources="sources" state="states['sources']"></div>
+      <div fs-discussions-section person="person" state="states['discussions']"></div>
+      <div fs-notes-section person="person" state="states['notes']"></div>
+    </div>
+    <div class="col-md-3 sidebar">
+      <div fs-changes-section person="person"></div>
+      <div fs-tools-section person="person"></div>
+    </div>
+  </div>
+</div>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1 style="text-transform: none">fsPersonProfile.js</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+angular.module('fsReferenceClientShared')
+  .directive('fsPersonProfile', function (fsLocation) {
+    return {
+      templateUrl: 'fsReferenceClientShared/fsPersonProfile/fsPersonProfile.tpl.html',
+      scope: {
+        person: '='
+      },
+      link: function(scope) {
+        scope.treeHref = fsLocation.getTreeUrl(scope.person.id);
+      }
+    };
+  });
+          </code></pre>
+        </section>
+
+        <section>
+          <h1 style="text-transform: none">fsPersonProfile.tpl.html</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+<div class="profileHeaderContainer">
+  <div class="tree-family jumbotron">
+    <div class="personWrapper">
+      <div class="nameWrapper">
+        <div class="row">
+          <div class="col-lg-2 col-md-2">
+            <i class="icon-rounded hidden-xs"
+               ng-class="{'fs-icon-male': person._isMale(), 'fs-icon-female': !person._isMale()}">&nbsp;</i>
+          </div>
+          <div class="col-lg-10 col-md-10">
+            <div class="pull-right"><span ng-show="person._busy">
+              <i class="fa fa-spinner fa-spin"></i></span></div>
+            <h1>{{person.$getDisplayName()}}</h1>
+            <span class="lifeSpan">{{person.$getDisplayBirthDate()}} - {{person.$getDisplayDeathDate()}}</span>
+            <span class="pid">{{person.id}}</span>
+            <div class="personActions">
+              <ul class="list-collapsed">
+                <li class="pull-left"><a ng-href="{{treeHref}}">
+                  <i class="fs-icon-male fs-icon-pedigree">&nbsp;</i>View Tree</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearboth"></div>
+  </div>
+</div>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>Extending</h1>
+          <img src="img/person-annotated.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Fork</h1>
+          <ul>
+            <li>Fork <a href="https://github.com/rootsdev/familysearch-reference-client">https://github.com/rootsdev/familysearch-reference-client</a></li>
+            <li>create a directory for your components; e.g., <span class="em2">src/common/dqComponents</span></li>
+          </ul>
+          <p></p>
+        </section>
+
+        <section>
+          <h1 style="text-transform: none">dqPedigreeMini.js</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1 style="text-transform: none">dqPedigreeMini.tpl.html</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1 style="text-transform: none">dqPersonMini.js</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1 style="text-transform: none">dqPersonMini.tpl.html</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>inject into person</h1>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          </code></pre>
+          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          </code></pre>
+        </section>
+
+        <section>
+          <h1>Result</h1>
+          <img src="" alt=""/>
+        </section>
+
+        <section>
+          <h1>The End</h1>
+        </section>
+      </div>
 
 		</div>
 
