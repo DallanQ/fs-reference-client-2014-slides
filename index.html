@@ -400,13 +400,15 @@ angular.module('fsReferenceClientShared')
         <div class="row">
           <div class="col-lg-2 col-md-2">
             <i class="icon-rounded hidden-xs"
-               ng-class="{'fs-icon-male': person._isMale(), 'fs-icon-female': !person._isMale()}">&nbsp;</i>
+               ng-class="{'fs-icon-male': person._isMale(),
+                          'fs-icon-female': !person._isMale()}">&nbsp;</i>
           </div>
           <div class="col-lg-10 col-md-10">
             <div class="pull-right"><span ng-show="person._busy">
               <i class="fa fa-spinner fa-spin"></i></span></div>
             <h1>{{person.$getDisplayName()}}</h1>
-            <span class="lifeSpan">{{person.$getDisplayBirthDate()}} - {{person.$getDisplayDeathDate()}}</span>
+            <span class="lifeSpan">{{person.$getDisplayBirthDate()}} -
+                                   {{person.$getDisplayDeathDate()}}</span>
             <span class="pid">{{person.id}}</span>
             <div class="personActions">
               <ul class="list-collapsed">
@@ -427,6 +429,16 @@ angular.module('fsReferenceClientShared')
         <section>
           <h1>Extending</h1>
           <img src="img/person-annotated.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Result</h1>
+          <img src="img/mini-pedigree-result.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Re-Use Components</h1>
+          <img src="img/mini-pedigree-result2.png" alt=""/>
         </section>
 
         <section>
@@ -451,7 +463,8 @@ angular.module('dqPedigreeMini', ['loDash', 'fsReferenceClientShared', 'dqPerson
       controller: function($scope) {
         fsApi.getAncestry($scope.personId, {generations: 2}).then(function(response) {
           $scope.persons = _.filter(response.getPersons(), function(person) {
-            return person.$getAscendancyNumber() >= 1 && person.$getAscendancyNumber() <= 7;
+            return person.$getAscendancyNumber() >= 1 &&
+                   person.$getAscendancyNumber() <= 7;
           });
         });
       }
@@ -523,17 +536,8 @@ angular.module('dqPersonMini', [])
         </section>
 
         <section>
-          <h1>Result</h1>
-          <img src="img/mini-pedigree-result.png" alt=""/>
-        </section>
-
-        <section>
-          <h1>Re-Use Components</h1>
-          <img src="img/mini-pedigree-result2.png" alt=""/>
-        </section>
-
-        <section>
           <h1>The End</h1>
+          <p>Slides are at <a href="https://github.com/DallanQ/fs-reference-client-2014-slides">https://github.com/DallanQ/fs-reference-client-2014-slides</a></p>
         </section>
       </div>
 
