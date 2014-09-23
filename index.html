@@ -441,38 +441,95 @@ angular.module('fsReferenceClientShared')
         <section>
           <h1 style="text-transform: none">dqPedigreeMini.js</h1>
           <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+angular.module('dqPedigreeMini', ['loDash', 'fsReferenceClientShared', 'dqPersonMini'])
+  .directive('dqPedigreeMini', function (_, fsApi) {
+    return {
+      templateUrl: 'dqComponents/dqPedigreeMini.tpl.html',
+      scope: {
+        personId: '@'
+      },
+      controller: function($scope) {
+        fsApi.getAncestry($scope.personId, {generations: 2}).then(function(response) {
+          $scope.persons = _.filter(response.getPersons(), function(person) {
+            return person.$getAscendancyNumber() >= 1 && person.$getAscendancyNumber() <= 7;
+          });
+        });
+      }
+    };
+  });
           </code></pre>
         </section>
 
         <section>
           <h1 style="text-transform: none">dqPedigreeMini.tpl.html</h1>
           <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h4 class="panel-title">Mini Pedigree</h4>
+  </div>
+  <div class="panel-body dq-pedigree-mini-outer">
+    <div ng-repeat="person in persons">
+      &lt;div dq-person-mini person="person"
+           is-focus="{{person.$getAscendancyNumber() == 1}}"
+           class="dq-pedigree-mini-person"
+           ng-class="'dq-pedigree-mini-pos'+person.$getAscendancyNumber()"&gt;
+      &lt;/div&gt;
+    </div>
+  </div>
+</div>
           </code></pre>
         </section>
 
         <section>
           <h1 style="text-transform: none">dqPersonMini.js</h1>
           <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+angular.module('dqPersonMini', [])
+  .directive('dqPersonMini', function () {
+    return {
+      templateUrl: 'dqComponents/dqPersonMini.tpl.html',
+      scope: {
+        person: '=',
+        isFocus: '@'
+      }
+    };
+  });
           </code></pre>
         </section>
 
         <section>
           <h1 style="text-transform: none">dqPersonMini.tpl.html</h1>
           <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+<div class="dq-person-mini">
+  <a href="" fs-person-popover person="person" popover-placement="left">
+    &lt;span class="dq-person-mini-name"
+          ng-style="{'font-weight': isFocus === 'true' ? 'bold' : 'normal',
+                     'color': isFocus === 'true' ? '#333' : '#0051c4'}"&gt;
+      {{person.$getDisplayName()}}
+    &lt;/span&gt;
+  </a>
+</div>
           </code></pre>
         </section>
 
         <section>
           <h1>inject into person</h1>
           <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
-          </code></pre>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+<div class="col-md-3 sidebar">
+  <div fs-changes-section person="person"></div>
+  <div fs-tools-section person="person"></div>
+  <div dq-pedigree-mini person-id="{{person.id}}"></div>
+</div>
           </code></pre>
         </section>
 
         <section>
           <h1>Result</h1>
-          <img src="" alt=""/>
+          <img src="img/mini-pedigree-result.png" alt=""/>
+        </section>
+
+        <section>
+          <h1>Re-Use Components</h1>
+          <img src="img/mini-pedigree-result2.png" alt=""/>
         </section>
 
         <section>
