@@ -122,6 +122,15 @@
         </section>
 
         <section>
+          <h1>Disclaimers</h1>
+          <ul>
+            <li><span class="em">Not official</span> - not an official FamilySearch project</li>
+            <li><span class="em">Not supported</span> - code is provided as-is</li>
+            <li><span class="em">Not maintained</span> - everything currently works...</li>
+          </ul>
+        </section>
+
+        <section>
           <h1>What can I do with it?</h1>
           <ol>
             <li>Have you ever thought you could improve upon the FamilySearch UI?
@@ -203,19 +212,9 @@
 
         <section>
           <h1 style="text-transform: none">index.html</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px; width:1100px; margin-left: -150px; max-height:600px" data-trim>
 &lt;head&gt;
-  <!-- stylesheets and fonts -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href="assets/museo/museo.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <% styles.forEach( function ( file ) { %>
-            <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
-  <!-- Javascript -->
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <% scripts.forEach( function ( file ) { %>
-            <script type="text/javascript" src="<%= file %>"></script><% }); %>
+  <!-- include stylesheets, fonts, and javascripts -->
 &lt;/head&gt;
 &lt;body&gt;
   <div class="navbar navbar-default navbar-static-top">
@@ -239,7 +238,7 @@
 
         <section>
           <h1 style="text-transform: none">app.js</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px; width:1100px; margin-left: -150px; max-height:600px" data-trim>
 angular.module('fsReferenceClient', [ 'fsReferenceClientShared', 'templates-app', 'templates-common', 'ui.bootstrap', 'ui.router.state', 'ui.router'])
   .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -262,6 +261,11 @@ angular.module('fsReferenceClient', [ 'fsReferenceClientShared', 'templates-app'
       ...
     });
   })
+            </code></pre>
+          </section>
+        <section>
+          <h1 style="text-transform: none">app.js (continued)</h1>
+          <pre><code style="font-size:24px; line-height:24px; width:1100px; margin-left: -150px; max-height:600px" data-trim>
   .controller('AppController', function ($scope) {
     $scope.environment = 'Sandbox';
     $scope.$on('$stateChangeStart', function(event, toState) {
@@ -281,7 +285,7 @@ angular.module('fsReferenceClient', [ 'fsReferenceClientShared', 'templates-app'
 
         <section>
           <h1 style="text-transform: none">person.js</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 angular.module('fsReferenceClient')
   .config(function ($stateProvider) {
     $stateProvider.state('person', {
@@ -314,7 +318,7 @@ angular.module('fsReferenceClient')
 
         <section>
           <h1 style="text-transform: none">person.js (continued)</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
   .controller('PersonController', function ($scope, $state, $rootScope, person, sources, fsApi, fsUtils, fsCurrentUserCache) {
     var sections = ['vitalFacts', 'otherInfo', 'familyMembers', 'sources', 'discussions', 'notes' ];
     $scope.states = {};
@@ -351,7 +355,7 @@ angular.module('fsReferenceClient')
 
         <section>
           <h1 style="text-transform: none">person.tpl.html</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 <div fs-person-profile person="person"></div>
 <div class="mainContent">
   <div class="row">
@@ -374,7 +378,7 @@ angular.module('fsReferenceClient')
 
         <section>
           <h1 style="text-transform: none">fsPersonProfile.js</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 angular.module('fsReferenceClientShared')
   .directive('fsPersonProfile', function (fsLocation) {
     return {
@@ -392,7 +396,7 @@ angular.module('fsReferenceClientShared')
 
         <section>
           <h1 style="text-transform: none">fsPersonProfile.tpl.html</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 <div class="profileHeaderContainer">
   <div class="tree-family jumbotron">
     <div class="personWrapper">
@@ -452,7 +456,7 @@ angular.module('fsReferenceClientShared')
 
         <section>
           <h1 style="text-transform: none">dqPedigreeMini.js</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 angular.module('dqPedigreeMini', ['loDash', 'fsReferenceClientShared', 'dqPersonMini'])
   .directive('dqPedigreeMini', function (_, fsApi) {
     return {
@@ -475,7 +479,7 @@ angular.module('dqPedigreeMini', ['loDash', 'fsReferenceClientShared', 'dqPerson
 
         <section>
           <h1 style="text-transform: none">dqPedigreeMini.tpl.html</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 <div class="panel panel-info">
   <div class="panel-heading">
     <h4 class="panel-title">Mini Pedigree</h4>
@@ -495,7 +499,7 @@ angular.module('dqPedigreeMini', ['loDash', 'fsReferenceClientShared', 'dqPerson
 
         <section>
           <h1 style="text-transform: none">dqPersonMini.js</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 angular.module('dqPersonMini', [])
   .directive('dqPersonMini', function () {
     return {
@@ -511,7 +515,7 @@ angular.module('dqPersonMini', [])
 
         <section>
           <h1 style="text-transform: none">dqPersonMini.tpl.html</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 <div class="dq-person-mini">
   <a href="" fs-person-popover person="person" popover-placement="left">
     &lt;span class="dq-person-mini-name"
@@ -526,7 +530,7 @@ angular.module('dqPersonMini', [])
 
         <section>
           <h1>inject into person</h1>
-          <pre><code style="font-size:20px; line-height:20px; width:1000px; max-height:600px" data-trim>
+          <pre><code style="font-size:24px; line-height:24px;  width:1100px; margin-left: -150px; max-height:600px" data-trim>
 <div class="col-md-3 sidebar">
   <div fs-changes-section person="person"></div>
   <div fs-tools-section person="person"></div>
